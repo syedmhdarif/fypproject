@@ -9,7 +9,7 @@ export default class IDcard2 extends Component {
         <View style={styles.matric}>
           
             <Image                 
-                style={{ borderWidth:40 , borderRadius:8, marginTop:50,width:130, height:130}}
+                style={{ borderRadius:8, marginTop:50,width:130, height:130}}
                 source={require('../images/syed.jpg')}/>
             <View style={styles.textview}>
             <Text style={styles.textedit}>SYED ARIF</Text>
@@ -32,16 +32,17 @@ export default class IDcard2 extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    
+    flex:1,
+    justifyContent:'flex-start',    
     backgroundColor: '#ffffff',
     textAlignVertical: 'top',
+    
   },
   matric: {
-    marginTop:20,
-    justifyContent: 'center',
+    marginTop:40 ,    
     alignItems: 'center',
     backgroundColor :'#00b383',
-    paddingBottom:10,
+    paddingBottom:40,
     marginHorizontal:40,
     borderRadius:10,
         

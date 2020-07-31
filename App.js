@@ -31,6 +31,10 @@ import IAttend from './src/pages/IAttend';
 import Ewallet from './src/pages/Ewallet';
 import LoginPage from './src/pages/LoginPage';
 import Loading from './src/pages/Loading';
+import MyClass from './src/pages/MyClass';
+import CreateClass from './src/pages/CreateClass';
+import JoinClass from './src/pages/JoinClass';
+import info4993 from './src/class pages/info4993';
 
 const Stack = createStackNavigator();
 
@@ -39,6 +43,7 @@ function App() {
     
    
     <NavigationContainer>
+    
       <Stack.Navigator initialRouteName="LoginPage" headerMode="none" >
       <Stack.Screen name="LoginPage" component={LoginPage} />
         <Stack.Screen  name="Login" component={Login}  />
@@ -48,6 +53,10 @@ function App() {
         <Stack.Screen  name="IDcard2" component={IDcard2} />
         <Stack.Screen name="IAttend" component={IAttend} />
         <Stack.Screen name="Ewallet" component={Ewallet} />
+        <Stack.Screen name="MyClass" component={MyClass} />
+        <Stack.Screen name="CreateClass" component={CreateClass} />
+        <Stack.Screen name="JoinClass" component={JoinClass} />
+        <Stack.Screen name="info4993" component={info4993} />
       </Stack.Navigator>
     </NavigationContainer>
   

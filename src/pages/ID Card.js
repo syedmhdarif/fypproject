@@ -62,7 +62,7 @@ const IDcard=()=> {
             activeTintColor: '#ffffff',
             labelStyle: {  fontWeight: 'bold' },
             
-            style: { backgroundColor: '#455a64' },
+            style: { backgroundColor: '#455a64', },
           }}>
         <Tab.Screen name="IAttend" component={IAttend} />
         <Tab.Screen name="ID Card" component={IDcard2} />
