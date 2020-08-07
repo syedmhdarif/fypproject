@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { TextInput, View, ScrollView, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import auth from '@react-native-firebase/auth';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default class MyClass extends Component{
     render(){
@@ -8,7 +9,7 @@ export default class MyClass extends Component{
             <ScrollView>
             <View style={styles.classtext}>
             <View style={{marginBottom:10, marginTop:10,}}>
-                <Text style={{fontWeight:'bold', fontSize:30, color:'#595959'}}>My Class</Text>
+                <Text style={{fontWeight:'300', fontSize:25, color:'#595959'}}>My Class</Text>
             </View>
                 <TouchableOpacity 
                     onPress={() => this.props.navigation.navigate('info4993')} title="info4993">
@@ -84,11 +85,14 @@ const styles = StyleSheet.create({
         backgroundColor: "#ffffff",
     },
     textedit:{ 
+        borderColor:'#595959',
         borderWidth:1,
-        borderRadius:8,
-        padding:20,
+        borderRadius:4,
+        width:wp('95%'),
+        paddingHorizontal:15,
+        paddingVertical:10,
         marginVertical:5,   
-        fontWeight:'bold',
+        fontWeight:'900',
         color:'#595959', fontSize:20
     
       },

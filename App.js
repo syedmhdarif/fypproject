@@ -35,6 +35,9 @@ import MyClass from './src/pages/MyClass';
 import CreateClass from './src/pages/CreateClass';
 import JoinClass from './src/pages/JoinClass';
 import info4993 from './src/class pages/info4993';
+import Chapter from './src/class pages/chapter';
+import Student from './src/class pages/student';
+import Record from './src/class pages/record';
 
 const Stack = createStackNavigator();
 
@@ -57,6 +60,9 @@ function App() {
         <Stack.Screen name="CreateClass" component={CreateClass} />
         <Stack.Screen name="JoinClass" component={JoinClass} />
         <Stack.Screen name="info4993" component={info4993} />
+        <Stack.Screen name="Chapter" component={Chapter} />
+        <Stack.Screen name="Student" component={Student} />
+        <Stack.Screen name="Record" component={Record} />
       </Stack.Navigator>
     </NavigationContainer>
   

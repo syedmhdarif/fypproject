@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, StyleSheet, Button, Image, TouchableOpacity  } from "react-native";
 import auth from '@react-native-firebase/auth';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp, marginHorizontal as mh} from 'react-native-responsive-screen';
 
 export default class IDcard2 extends Component {
   render() {
@@ -39,12 +40,21 @@ const styles = StyleSheet.create({
     
   },
   matric: {
-    marginTop:40 ,    
+    marginTop:20,
     alignItems: 'center',
     backgroundColor :'#00b383',
-    paddingBottom:40,
+    width:wp('80%'),
+    height:hp('80%'),
     marginHorizontal:40,
     borderRadius:10,
+    shadowColor: "black",
+    shadowOffset: {
+      width: 5,
+      height: 3,
+    },
+    shadowOpacity: 0.27,
+    shadowRadius: 4.65,
+    elevation: 5,
         
     
   },

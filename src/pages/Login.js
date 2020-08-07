@@ -9,6 +9,7 @@ import {
   Image,
   StatusBar, TouchableOpacity
 } from 'react-native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 import Logo from '../components/Logo';
 import Form from '../pages/Form';
@@ -39,7 +40,9 @@ const styles = StyleSheet.create({
       color:'#ffffff',
       marginVertical:20,
       backgroundColor:'#1c313a',
-      paddingVertical:8,
+      width:wp('100%'),
+      height:hp('7%'),
+      paddingVertical:9,
       paddingHorizontal:45,
       alignItems:'center',
       justifyContent:'center',     

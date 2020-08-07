@@ -2,19 +2,20 @@ import React, { Component } from 'react';
 import { TextInput, View, Text, StyleSheet, TouchableOpacity} from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
-import AntDesign from 'react-native-vector-icons/AntDesign';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 
 
 import MyClass from './MyClass';
 import CreateClass from './CreateClass';
 import JoinClass from './JoinClass';
+import { HeaderTitle } from '@react-navigation/stack';
 
 const Tab = createBottomTabNavigator();
 
 const IAttend=()=> {
     return (
         <Tab.Navigator initialRouteName='MyClass'
+            backBehavior='initialRoute'
             tabBarOptions={{
             activeTintColor: '#ffffff',
             labelStyle: {  fontWeight: 'bold' },          

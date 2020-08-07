@@ -1,33 +1,46 @@
 import React, { Component } from 'react';
 import { TextInput, View, Text, StyleSheet, TouchableOpacity} from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
-import { FAB } from 'react-native-paper';
+import Chapter from './chapter';
+import Student from './student';
+import Record from './record';
 
-export default class info4993 extends Component{
-    render(){
-        return(
-            <View>
+const Tab = createBottomTabNavigator();
+
+const info4993=()=> {
+    return (
+      
+        <Tab.Navigator initialRouteName='Chapter'
             
-                <Text>
-                
-                    HAIIII
-                </Text>
-                <FAB
-                    style={styles.fab}
-                    
-                    icon="plus"
-                    onPress={() => console.log('Pressed')}
-                />
-            </View>
-        )
-    }
+            tabBarOptions={{
+            activeTintColor: '#ffffff',
+            labelStyle: {  fontWeight: 'bold' },          
+            style: { backgroundColor: '#455a64' },
+          }}>
+            <Tab.Screen name="Chapter" component={Chapter}                
+              options={{
+              tabBarLabel: 'Chapter',
+              tabBarIcon: ({ color }) => (
+             <MaterialCommunityIcons name="home" color={color} size={20} />
+                ),}}     
+            />
+            <Tab.Screen name="Student" component={Student} 
+                options={{
+              tabBarLabel: 'Student',
+              tabBarIcon: ({ color, size }) => (
+             <Icon name="newspaper" color={color} size={20} />),}}
+            />
+            <Tab.Screen name="Record" component={Record} 
+                options={{
+              tabBarLabel: 'Record',
+              tabBarIcon: ({ color, size }) => (
+             <Icon name="add-circle" color={color} size={20} />),}}
+            />
+        </Tab.Navigator>
+        
+    )
 }
-
-const styles = StyleSheet.create({
-    fab: {
-      position: 'absolute',
-      margin: 16,
-      right: 0,
-      bottom: 0,
-    },
-  })
+export default info4993;
