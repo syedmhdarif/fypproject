@@ -1,45 +1,17 @@
 import React, { Component } from 'react';
-import { TextInput, View, ScrollView, Text, StyleSheet, TouchableOpacity,color} from 'react-native';
-import auth from '@react-native-firebase/auth';
-import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { TextInput, View, Text, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp,
+    listenOrientationChange as loc,
+    removeOrientationListener as rol} from 'react-native-responsive-screen';
 
-function MyClass ({navigation}){
-    
-        return(
-            
-            <View >
-            <TouchableOpacity style={styles.header} onPress={() => navigation.openDrawer()}>
-            <Icon name="home" color={color} size={20} />
-                <Text style={{fontSize:20, fontWeight:'bold', color:'#ffffff', marginHorizontal:15}}>Digital Matric</Text>
-            </TouchableOpacity>
-                <ScrollView >
-            <View style={styles.classtext}>
-            <View style={{marginBottom:10, marginTop:10,}}>
-                <Text style={{fontWeight:'300', fontSize:25, color:'#595959'}}>My Class</Text>
-            </View>
-                <TouchableOpacity 
+export default class Myclasslist extends Component{
+  render(){
+    return(
+        <View>
+        <TouchableOpacity 
                     onPress={() => this.props.navigation.navigate('info4993')} title="info4993">
                     <Text style={styles.textedit}>
                         INFO 4993 - SEMESTER 2 2019/2020
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity 
-                    onPress={() => this.props.navigation.navigate('Chapter')} title="info4993">
-                    <Text style={styles.textedit}>
-                        INFO 4024 - SEMESTER 2 2019/2020
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity 
-                    onPress={() => this.props.navigation.navigate('info4993')} title="info4993">
-                    <Text style={styles.textedit}>
-                        INFO 4993 - SEMESTER 2 2019/2020
-                    </Text>
-                </TouchableOpacity>
-                <TouchableOpacity 
-                    onPress={() => this.props.navigation.navigate('Chapter')} title="info4993">
-                    <Text style={styles.textedit}>
-                        INFO 4024 - SEMESTER 2 2019/2020
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity 
@@ -78,17 +50,27 @@ function MyClass ({navigation}){
                         INFO 4993 - SEMESTER 2 2019/2020
                     </Text>
                 </TouchableOpacity>
-                </View>
-                </ScrollView>
-
-                
-                
-            </View>
-        )
-   
+                <TouchableOpacity 
+                    onPress={() => this.props.navigation.navigate('info4993')} title="info4993">
+                    <Text style={styles.textedit}>
+                        INFO 4993 - SEMESTER 2 2019/2020
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                    onPress={() => this.props.navigation.navigate('info4993')} title="info4993">
+                    <Text style={styles.textedit}>
+                        INFO 4993 - SEMESTER 2 2019/2020
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity 
+                    onPress={() => this.props.navigation.navigate('info4993')} title="info4993">
+                    <Text style={styles.textedit}>
+                        INFO 4993 - SEMESTER 2 2019/2020
+                    </Text>
+                </TouchableOpacity></View>
+    )
+  }
 }
-
-export default MyClass;
 
 const styles = StyleSheet.create({
     classtext:{
@@ -109,19 +91,5 @@ const styles = StyleSheet.create({
         color:'#595959', fontSize:18
     
       },
-      header:{
-        flexDirection:'row',
-        width:wp('100%'), height:hp('8%'), backgroundColor:'#00b359',
-        shadowColor: "black",
-        shadowOffset: {
-          width: 5,
-          height: 3,
-        },
-        shadowOpacity: 0.27,
-        shadowRadius: 4.65,
-        elevation: 5,
-        alignItems:'center',
-        paddingHorizontal:22
-      }
      
 });

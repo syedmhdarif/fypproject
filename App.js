@@ -38,6 +38,12 @@ import info4993 from './src/class pages/info4993';
 import Chapter from './src/class pages/chapter';
 import Student from './src/class pages/student';
 import Record from './src/class pages/record';
+import Qrscanner from './src/components/qrscanner';
+import Myclasslist from './src/student/Myclasslist';
+import Studentlist from './src/student/Studentlist';
+import StudentAttend from './src/student/StudentAttend';
+import CreateClass2 from './src/pages/CreateClass2';
+import JoinClass2 from './src/pages/JoinClass2';
 
 const Stack = createStackNavigator();
 
@@ -47,9 +53,12 @@ function App() {
    
     <NavigationContainer>
     
-      <Stack.Navigator initialRouteName="LoginPage" headerMode="none" >
-      <Stack.Screen name="LoginPage" component={LoginPage} />
-        <Stack.Screen  name="Login" component={Login}  />
+      <Stack.Navigator initialRouteName="LoginPage" headerMode="none" screenOptions={{
+        headerTintColor: '#ffffff',
+        headerStyle: { backgroundColor: '#00b359' },
+      }}>
+      <Stack.Screen name="Digital Matric" component={LoginPage} />
+        <Stack.Screen   name="Login" component={Login}  />
         <Stack.Screen name="Form" component={Form} />
         <Stack.Screen name="Loading" component={Loading} />
         <Stack.Screen  name="ID Card" component={IDcard} />
@@ -63,6 +72,12 @@ function App() {
         <Stack.Screen name="Chapter" component={Chapter} />
         <Stack.Screen name="Student" component={Student} />
         <Stack.Screen name="Record" component={Record} />
+        <Stack.Screen name="Qrscanner" component={Qrscanner} />
+        <Stack.Screen name="Myclasslist" component={Myclasslist} />
+        <Stack.Screen name="Studentlist" component={Studentlist} />
+        <Stack.Screen name="StudentAttend" component={StudentAttend} />
+        <Stack.Screen name="CreateClass2" component={CreateClass2} />
+        <Stack.Screen name="JoinClass2" component={JoinClass2} />
       </Stack.Navigator>
     </NavigationContainer>
   
@@ -86,3 +101,4 @@ const styles = StyleSheet.create({
 
   
 });
+

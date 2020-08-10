@@ -30,7 +30,7 @@ const Login = () =>{
 
 const styles = StyleSheet.create({
     container : {
-      backgroundColor :'#455a64',
+      backgroundColor :'#1f2e2e',
       flex:1,
       alignItems:'center',
       justifyContent:'center'
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
       fontSize:13,
       color:'#ffffff',
       marginVertical:20,
-      backgroundColor:'#1c313a',
+      backgroundColor:'#00b359',
       width:wp('100%'),
       height:hp('7%'),
       paddingVertical:9,

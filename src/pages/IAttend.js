@@ -18,8 +18,9 @@ const IAttend=()=> {
             backBehavior='initialRoute'
             tabBarOptions={{
             activeTintColor: '#ffffff',
+            inactiveTintColor:'#cccccc',
             labelStyle: {  fontWeight: 'bold' },          
-            style: { backgroundColor: '#455a64' }, 
+            style: { backgroundColor: '#00b359' }, 
           }}>
             <Tab.Screen name="MyClass" component={MyClass}                
               options={{
