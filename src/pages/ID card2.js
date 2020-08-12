@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, StyleSheet, Button, Image, TouchableOpacity, ScrollView, color  } from "react-native";
+import { View, Text, StyleSheet, Button, Image, TouchableOpacity, ScrollView, color, ImageBackground  } from "react-native";
 import auth from '@react-native-firebase/auth';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp, marginHorizontal as mh} from 'react-native-responsive-screen';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -8,30 +8,47 @@ function IDcard2({navigation}) {
   
     return (
       <View style={{flex:1,}}>
-      <TouchableOpacity style={styles.header} onPress={() => navigation.openDrawer()}>
-      <Icon name="home" color={color} size={20} />
-        <Text style={{fontSize:20, fontWeight:'bold', color:'#ffffff', marginHorizontal:15}}>Digital Matric</Text>
-      </TouchableOpacity>
+        <TouchableOpacity style={styles.header} onPress={() => navigation.openDrawer()}>
+        <Icon name="home" color={'#ffffff'} size={20} />
+          <Text style={{fontSize:20, fontWeight:'bold', color:'#ffffff', marginHorizontal:15}}>Digital Matric</Text>
+        </TouchableOpacity>
       <ScrollView>
       
       <View style={styles.container}>
       <View style={
-        {backgroundColor:'#f2f2f2', marginTop:180,width:wp('100%'), 
-        height:hp('100%'), elevation: 3, position:'absolute'}}></View>
+        {backgroundColor:'#f2f2f2', marginTop:210,width:wp('100%'), 
+        height:hp('100%'), elevation: 3, position:'absolute',
+        borderTopLeftRadius:90}}></View>
+
+                <Image                 
+                  style={{ 
+                    borderRadius:40,width:wp('20%'), height:hp('13%'), alignSelf:'center',
+                     elevation:6, marginTop:10, 
+                    }}
+                  source={require('../images/syed.jpg')}/>
 
         <View style={styles.profileview}>
-        <Image                 
-                style={{ 
-                  borderRadius:40,width:wp('20%'), height:hp('13%'), alignSelf:'center',
-                  marginLeft:10
-                  }}
-                source={require('../images/syed.jpg')}/>
+            <Text style={{color:'#ffffff', alignSelf:'center', marginTop:20}}>
+            SYED MOHAMAD ARIF BIN SAYED MOHD ALI 
+            </Text>
+            <Text style={{color:'#ffffff', alignSelf:'center'}}>
+            KULLIYYAH OF INFOTMATION TECHNOLOGY
+            </Text>
+            <Text style={{color:'#ffffff', alignSelf:'center'}}>
+            BIT
+            </Text>
+            <Text style={{color:'#ffffff',  alignSelf:'center'}}>
+            Syedarifjr@gmail.com
+            </Text>
+         
         </View>
 
-        <View style={styles.matric}>
-          
+        <View style={{alignItems:'center', marginTop:100}}>
+          <ImageBackground 
+          style={styles.matric} 
+          source={require('../images/matriccard.png')}>
             <Image                 
-                style={{ borderRadius:8, marginTop:50,width:130, height:130}}
+                style={{ borderRadius:20, marginTop:102,width:wp('36%'), height:hp('23%')}}
                 source={require('../images/syed.jpg')}/>
             <View style={styles.textview}>
             <Text style={styles.textedit}>SYED ARIF</Text>
@@ -45,10 +62,11 @@ function IDcard2({navigation}) {
          
                 <TouchableOpacity style={{marginVertical:20}} onPress={()=> auth().signOut()} >
                      <Text style={{color:'black'}} >Logout</Text>
-               </TouchableOpacity>
+               </TouchableOpacity></ImageBackground>
+               </View>
         </View>
         
-      </View>
+      
       </ScrollView>
       </View>
     );
@@ -60,30 +78,28 @@ const styles = StyleSheet.create({
   container: {
     
     justifyContent:'flex-start',    
-    backgroundColor: '#00b359',
+    backgroundColor: '#199591',
     textAlignVertical: 'top',
+    
     
     
   },
   matric: {
+    width:wp('85%'), 
+    height:hp('90%'), 
+    elevation:4, 
+    alignItems:'center',
     marginBottom:20,
-    marginTop:20,
-    alignSelf:'center',
-    alignItems: 'center',
-    backgroundColor :'#ffffff',
-    width:wp('90%'),
-    height:hp('80%'),
-    marginHorizontal:40,
-    borderRadius:10,
     shadowColor: "black",
     shadowOffset: {
-      width: 5,
-      height: 3,
+      width: 60,
+      height:1,
     },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
-    elevation: 4,
-        
+    shadowOpacity: 20,
+    shadowRadius: 40,
+    borderWidth:0.3,
+    borderRadius:20
+    
     
   },
   textedit:{    
@@ -102,13 +118,13 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   profileview:{
-    flexDirection:'row',
+    flexDirection:'column',
     alignSelf:'center',
     width:wp('90%'),
     height:hp('20%'),
-    marginTop:20,
-    backgroundColor:'#ffffff',
-    borderRadius:10,
+    position:'absolute',
+    backgroundColor:'#76c485',
+    
     shadowColor: "black",
     shadowOffset: {
       width: 5,
@@ -117,10 +133,11 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.27,
     shadowRadius: 4.65,
     elevation: 4,
+    marginTop:60, justifyContent:'center', borderTopLeftRadius:40, borderBottomRightRadius:40
   },
   header:{
     flexDirection:'row',
-    width:wp('100%'), height:hp('8%'), backgroundColor:'#00b359',
+    width:wp('100%'), height:hp('8%'), backgroundColor:'#199591',
     shadowColor: "black",
     shadowOffset: {
       width: 5,
@@ -131,5 +148,5 @@ const styles = StyleSheet.create({
     elevation: 5,
     alignItems:'center',
     paddingHorizontal:22
-  }
+  },
 });

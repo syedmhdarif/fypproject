@@ -20,7 +20,7 @@ const IAttend=()=> {
             activeTintColor: '#ffffff',
             inactiveTintColor:'#cccccc',
             labelStyle: {  fontWeight: 'bold' },          
-            style: { backgroundColor: '#00b359' }, 
+            style: { backgroundColor: '#199591' }, 
           }}>
             <Tab.Screen name="MyClass" component={MyClass}                
               options={{

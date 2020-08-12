@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
       fontSize:13,
       color:'#ffffff',
       marginVertical:20,
-      backgroundColor:'#00b359',
+      backgroundColor:'#004d66',
       width:wp('100%'),
       height:hp('7%'),
       paddingVertical:9,
@@ -48,15 +48,6 @@ const styles = StyleSheet.create({
       justifyContent:'center',     
 
     },
-    button:{
-      justifyContent:'center',
-      backgroundColor :'#1c313a',
-      borderRadius :10,
-      paddingVertical:10,
-      marginBottom:30,  
-      width :300,
-  
-     },
   
      loginbutton:{
           
