@@ -48,9 +48,9 @@ import SplashS from './src/components/SplashS';
 import LogoProfile from './src/student/LogoProfile';
 
 import Pay from './src/wallet/Pay';
-import Reload from './src/wallet/reload';
-import Give from './src/wallet/give';
-import Transfer from './src/wallet/transfer';
+import Reload from './src/wallet/Reload';
+import Give from './src/wallet/Give';
+import Transfer from './src/wallet/Transfer';
 import Reload1 from './src/wallet/Reload1';
 
 const Stack = createStackNavigator();

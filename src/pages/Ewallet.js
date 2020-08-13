@@ -42,20 +42,20 @@ function Ewallet ({navigation}){
 
         <View style={styles.container}>
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Pay')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Pay')}>
                     <Text style={styles.textedit}>
                         Pay
                     </Text>
                 </TouchableOpacity>
 
-         <TouchableOpacity onPress={() => this.props.navigation.navigate('Reload')} >
+         <TouchableOpacity onPress={() => navigation.navigate('Reload')} >
                     <Text style={styles.textedit}>
                         Reload
                     </Text>
          </TouchableOpacity>
 
 
-        <TouchableOpacity onPress={() => this.props.navigation.navigate('Give')}>
+        <TouchableOpacity onPress={() => navigation.navigate('Give')}>
                     <Text style={styles.textedit}>
                         Transfer
                     </Text>

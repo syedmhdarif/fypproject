@@ -3,10 +3,10 @@ import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-export default class Reload1 extends Component{
+function Reload1 ({navigation}){
 
     
-  render(){
+ 
     
     return(
       <View>
@@ -28,8 +28,10 @@ Awesome!
 </Text>
       </View>
     )
-  }
+  
 }
+
+export default Reload1;
 
 const styles = StyleSheet.create({
     classtext:{

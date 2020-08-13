@@ -11,10 +11,10 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 import LinearGradient from 'react-native-linear-gradient';
 import { ceil } from 'react-native-reanimated';
 
-export default class Transfer extends Component{
+function Transfer ({navigation}){
 
     
-  render(){
+ 
     
     return(
     
@@ -44,7 +44,7 @@ export default class Transfer extends Component{
                     placeholder="What is it for?"
                     color='white'
                     />
-<TouchableOpacity  onPress={() => this.props.navigation.navigate('Reload1')}>
+<TouchableOpacity  onPress={() => navigation.navigate('Reload1')}>
                     <Text style={styles.textedit}>
                        Scan Here
                     </Text>
@@ -53,8 +53,10 @@ export default class Transfer extends Component{
       </View>
       </LinearGradient>
     )
-  }
+  
 }
+
+export default Transfer;
 
 const styles = StyleSheet.create({
     classtext:{

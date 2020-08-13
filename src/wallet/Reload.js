@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { TextInput, TouchableOpacity,View,Text, StyleSheet, } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-export default class Reload extends Component{
-  render(){
+function Reload ({navigation}){
+
     return (
         <View>
         <TextInput
@@ -21,7 +21,7 @@ export default class Reload extends Component{
         
         <Text style={{marginLeft:40, fontWeight:"bold"}}> Min reload amount is RM10</Text>
 
-        <TouchableOpacity  onPress={() => this.props.navigation.navigate('Reload1')}>
+        <TouchableOpacity  onPress={() => navigation.navigate('Reload1')}>
                     <Text style={styles.textedit}>
                         Reload Ewallet
                     </Text>
@@ -35,10 +35,12 @@ export default class Reload extends Component{
                     </View>
 
       )
-  }
+  
 
   
 }
+
+export default Reload;
 
 
 

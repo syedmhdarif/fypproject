@@ -3,10 +3,10 @@ import {StyleSheet, Text, TouchableOpacity, View, Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
-export default class Pay extends Component{
+function Pay ({navigation}){
 
     
-  render(){
+
     
     return(
       <View>
@@ -17,15 +17,17 @@ Scan barcode or QR code
 
 
 
-<TouchableOpacity  onPress={() => this.props.navigation.navigate('Reload1')}>
+<TouchableOpacity  onPress={() => navigation.navigate('Reload1')}>
                     <Text style={styles.textedit}>
                         SCAN FROM GALLERY
                     </Text>
                 </TouchableOpacity>
       </View>
     )
-  }
+  
 }
+
+export default Pay;
 
 const styles = StyleSheet.create({
     classtext:{
