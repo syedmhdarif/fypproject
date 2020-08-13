@@ -87,10 +87,10 @@ export default class JoinClass2 extends Component{
             </>
             <TextInput style={{borderBottomWidth:0.4, width:wp('90%'), paddingHorizontal:10 }} 
                 placeholderTextColor="#595959"              
-                secureTextEntry={true}
+                
                 underlineColorAndroid='rgba(0,0,0,0)'
                 placeholder="class code" 
-                
+                color='black'
                 
                 />
             <Alertbutton2/>

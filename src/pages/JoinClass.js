@@ -11,7 +11,7 @@ function JoinClass ({navigation}){
         return(
             <View>
                 <TouchableOpacity style={styles.header} onPress={() => navigation.openDrawer()}>
-            <Icon name="home" color={'#ffffff'} size={20} />
+            <Icon name="reorder-four-outline" color={'#ffffff'} size={20} />
                 <Text style={{fontSize:20, fontWeight:'bold', color:'#ffffff', marginHorizontal:15}}>Digital Matric</Text>
             </TouchableOpacity>
             <View>

@@ -61,22 +61,22 @@ export default class CreateClass2 extends Component{
                 placeholderTextColor="#595959"
                 underlineColorAndroid='rgba(0,0,0,0)'
                 placeholder="class name"
-                
+                color='black'
                  />
 
             <TextInput style={styles.inputBox} 
                 placeholderTextColor="#595959"              
                 underlineColorAndroid='rgba(0,0,0,0)'
                 placeholder="class code" 
-                
+                color='black'
                 
                 />
             <TextInput style={styles.inputBox} 
                 placeholderTextColor="#595959"              
-                secureTextEntry={true}
+                
                 underlineColorAndroid='rgba(0,0,0,0)'
                 placeholder="section" 
-                
+                color='black'
                 
                 />
             <>

@@ -10,9 +10,9 @@ import CreateClass2 from './CreateClass2';
 function CreateClass ({navigation}){
     
         return(
-            <View>
+            <View style={{flex:1}}>
                 <TouchableOpacity style={styles.header} onPress={() => navigation.openDrawer()}>
-            <Icon name="home" color={'#ffffff'} size={20} />
+            <Icon name="reorder-four-outline" color={'#ffffff'} size={20} />
                 <Text style={{fontSize:20, fontWeight:'bold', color:'#ffffff', marginHorizontal:15}}>Digital Matric</Text>
             </TouchableOpacity>
             <View>

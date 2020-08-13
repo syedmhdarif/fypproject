@@ -9,58 +9,35 @@ function IDcard2({navigation}) {
     return (
       <View style={{flex:1,}}>
         <TouchableOpacity style={styles.header} onPress={() => navigation.openDrawer()}>
-        <Icon name="home" color={'#ffffff'} size={20} />
+        <Icon name="reorder-four-outline" color={'#ffffff'} size={20} />
           <Text style={{fontSize:20, fontWeight:'bold', color:'#ffffff', marginHorizontal:15}}>Digital Matric</Text>
         </TouchableOpacity>
       <ScrollView>
       
       <View style={styles.container}>
       <View style={
-        {backgroundColor:'#f2f2f2', marginTop:210,width:wp('100%'), 
+        {backgroundColor:'#f2f2f2', marginTop:'50%',width:wp('100%'), 
         height:hp('100%'), elevation: 3, position:'absolute',
-        borderTopLeftRadius:90}}></View>
+        borderTopLeftRadius:90}}></View>               
 
-                <Image                 
-                  style={{ 
-                    borderRadius:40,width:wp('20%'), height:hp('13%'), alignSelf:'center',
-                     elevation:6, marginTop:10, 
-                    }}
-                  source={require('../images/syed.jpg')}/>
-
-        <View style={styles.profileview}>
-            <Text style={{color:'#ffffff', alignSelf:'center', marginTop:20}}>
-            SYED MOHAMAD ARIF BIN SAYED MOHD ALI 
-            </Text>
-            <Text style={{color:'#ffffff', alignSelf:'center'}}>
-            KULLIYYAH OF INFOTMATION TECHNOLOGY
-            </Text>
-            <Text style={{color:'#ffffff', alignSelf:'center'}}>
-            BIT
-            </Text>
-            <Text style={{color:'#ffffff',  alignSelf:'center'}}>
-            Syedarifjr@gmail.com
-            </Text>
-         
-        </View>
-
-        <View style={{alignItems:'center', marginTop:100}}>
+        <View sty le={{alignItems:'center', marginTop:'30%'}}>
           <ImageBackground 
           style={styles.matric} 
           source={require('../images/matriccard.png')}>
             <Image                 
-                style={{ borderRadius:20, marginTop:102,width:wp('36%'), height:hp('23%')}}
+                style={{ borderRadius:20, marginTop:110,width:wp('37%'), height:hp('20%')}}
                 source={require('../images/syed.jpg')}/>
             <View style={styles.textview}>
             <Text style={styles.textedit}>SYED ARIF</Text>
             <Text style={styles.textedit}>1718247</Text>
-            <Text style={styles.textedit}>KICT</Text></View>
+            <Text style={styles.textedit}>BIT</Text></View>
 
             <Image                 
-                style={{borderRadius:8, marginTop:20,width:100, height:100}}
+                style={{borderRadius:8, marginTop:'9%',width:wp('24%'), height:hp('14%')}}
                 source={require('../images/QR.png')}/>
                 <Text style={styles.textedit2}>17.07.2020  03.29pm</Text>
          
-                <TouchableOpacity style={{marginVertical:20}} onPress={()=> auth().signOut()} >
+                <TouchableOpacity style={{marginVertical:'8%'}} onPress={()=> auth().signOut()} >
                      <Text style={{color:'black'}} >Logout</Text>
                </TouchableOpacity></ImageBackground>
                </View>
@@ -85,8 +62,10 @@ const styles = StyleSheet.create({
     
   },
   matric: {
-    width:wp('85%'), 
-    height:hp('90%'), 
+    marginVertical:20,
+    alignSelf:'center',
+    width:wp('90%'), 
+    height:hp('78%'), 
     elevation:4, 
     alignItems:'center',
     marginBottom:20,
@@ -97,7 +76,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 20,
     shadowRadius: 40,
-    borderWidth:0.3,
+    borderWidth:0.2,
     borderRadius:20
     
     
@@ -121,19 +100,18 @@ const styles = StyleSheet.create({
     flexDirection:'column',
     alignSelf:'center',
     width:wp('90%'),
-    height:hp('20%'),
+    height:hp('17%'),
     position:'absolute',
     backgroundColor:'#76c485',
-    
     shadowColor: "black",
     shadowOffset: {
       width: 5,
       height: 3,
     },
-    shadowOpacity: 0.27,
-    shadowRadius: 4.65,
+    shadowOpacity: 2,
+    shadowRadius: 10,
     elevation: 4,
-    marginTop:60, justifyContent:'center', borderTopLeftRadius:40, borderBottomRightRadius:40
+    marginTop:'15%', justifyContent:'center', borderRadius:10,
   },
   header:{
     flexDirection:'row',
