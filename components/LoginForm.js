@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 
 import Logo from './Logo';
 import EmailAndPassword from './EmailAndPassword';
@@ -31,8 +31,14 @@ const LoginForm = () => {
             <View style={styles.emailAndPassword}>
                 <EmailAndPassword/>
             </View>
+
+        
         </View>
+
+        
         </Animatable.View>
+
+        
         </View>
     );
 };

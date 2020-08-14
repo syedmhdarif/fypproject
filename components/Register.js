@@ -1,9 +1,12 @@
+// const doRegister = await auth().createUserWithEmailAndPassword(email, password);
+
+
 import React, { Component } from 'react';
 import auth from '@react-native-firebase/auth';
 import { View, Text, StyleSheet,TextInput,TouchableOpacity, } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-class EmailAndPassword extends Component {
+class Register extends Component {
     state={
         email:'',
         password:'',
@@ -12,7 +15,7 @@ class EmailAndPassword extends Component {
     }
 
     onBottomPress = () =>{
-        auth().signInWithEmailAndPassword(this.state.email,this.state.password)
+        auth().createUserWithEmailAndPassword(this.state.email,this.state.password)
         .then(this.onLoginSuccess)
         .catch(err => {
             this.setState({
@@ -67,7 +70,7 @@ class EmailAndPassword extends Component {
                     >
                     <Text style={[styles.textSign, {
                         color:'#fff'
-                    }]}>Sign In</Text>
+                    }]}>Register</Text>
                 </LinearGradient>
                  </TouchableOpacity>
                  
@@ -135,4 +138,4 @@ const styles = StyleSheet.create({
 });
 
 //make this component available to the app
-export default EmailAndPassword;
+export default Register;

@@ -13,7 +13,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { useTheme } from '@react-navigation/native';
 
-const SplashScreen = ({navigation}) => {
+function WelcomePage({navigation}) {
     const { colors } = useTheme();
 
     return (
@@ -36,13 +36,13 @@ const SplashScreen = ({navigation}) => {
         >
             <Text style={[styles.title, {
                 color: colors.text
-            }]}>Stay connected with everyone!</Text>
-            <TouchableOpacity onPress={()=>navigation.navigate('RegisterPage')}>
-                <Text style={styles.text}>Sign up with account</Text>
-            </TouchableOpacity>
+            }]}>WELCOME !!</Text>
+            
+                <Text style={styles.text}>Stay connected within ourselves</Text>
+            
             
             <View style={styles.button}>
-            <TouchableOpacity onPress={()=>navigation.navigate('LoginPage')}>
+            <TouchableOpacity onPress={()=>navigation.navigate('HomePage')}>
                 <LinearGradient
                     colors={['#08d4c4', '#01ab9d']}
                     style={styles.signIn}
@@ -61,7 +61,7 @@ const SplashScreen = ({navigation}) => {
     );
 };
 
-export default SplashScreen;
+export default WelcomePage;
 
 const {height} = Dimensions.get("screen");
 const height_logo = height * 0.28;
