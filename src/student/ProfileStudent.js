@@ -37,7 +37,10 @@ const ProfileStudent =() =>{
             syedmhdarif
             </Text>
             <Text style={{color:'black', alignSelf:'center'}}>
-            Haiii helloo anyeong this is my bio
+            Haiii helloo anyeong this is my bio 
+            </Text>
+            <Text style={{color:'black', alignSelf:'center'}}>
+            Haiii helloo anyeong this is my bio 
             </Text>
             
         </View>
@@ -105,6 +108,7 @@ const styles = StyleSheet.create({
     height:hp('100%'),
   },
   profileview:{
+    height:hp('100%'),
     width:wp('96%'),   
     alignSelf:'center',
     borderTopStartRadius:35,

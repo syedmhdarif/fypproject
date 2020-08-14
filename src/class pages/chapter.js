@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { TextInput, View, Text, StyleSheet, TouchableOpacity, ScrollView} from 'react-native';
+import { TextInput, View, Text, StyleSheet, TouchableOpacity, ScrollView, FlatList} from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp,
     listenOrientationChange as loc,
     removeOrientationListener as rol} from 'react-native-responsive-screen';
@@ -11,6 +11,24 @@ import Alertbutton2 from '../class pages/alertbutton2';
 import MyBackButton from './backbutton';
 
 export default class Chapter extends Component{
+
+    constructor() {
+        super();
+        this.state = {
+          dataSource: {},
+          
+        };
+      }
+    
+      componentDidMount() {
+        var that = this;
+        let items = Array.apply(null, Array(20)).map((v, i) => {
+          return { id: i, src: 'http://placehold.it/200x200?text=' + (i + 1) };
+        });
+        that.setState({
+          dataSource: items,
+        });
+      }
     
     componentDidMount() {
         loc(this);
@@ -21,23 +39,23 @@ export default class Chapter extends Component{
       }
     render(){
         return(
-            <View>
+            <View style={{flex:1,}}>
             <ScrollView>
             
             <View style={styles.classtext}>
 
             <Text style=
                 {{fontSize:25, fontWeight:'300', marginVertical:20, color:'#666666'}}>
-                    Chapter
+                    Date
             </Text>
             <TouchableOpacity
             style={styles.textedit}
             onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 8                   
+                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:0}} >
+                    12/08/2020                   
                 </Text>
 
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
+                <Text style={{fontSize:15, paddingTop:4, marginLeft:150, color:'#595959' }}> 
                     student: 38/40 
                 </Text>
             </TouchableOpacity>
@@ -45,110 +63,89 @@ export default class Chapter extends Component{
             <TouchableOpacity
             style={styles.textedit}
             onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 7                   
+                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:0}} >
+                    12/08/2020                   
                 </Text>
 
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
-                    student: 40/40 
+                <Text style={{fontSize:15, paddingTop:4, marginLeft:150, color:'#595959' }}> 
+                    student: 38/40 
                 </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
             style={styles.textedit}
             onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 6                   
+                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:0}} >
+                    12/08/2020                   
                 </Text>
 
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
-                    student: 36/40 
+                <Text style={{fontSize:15, paddingTop:4, marginLeft:150, color:'#595959' }}> 
+                    student: 38/40 
                 </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
             style={styles.textedit}
             onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 5                   
+                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:0}} >
+                    12/08/2020                   
                 </Text>
 
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
-                    student: 36/40 
+                <Text style={{fontSize:15, paddingTop:4, marginLeft:150, color:'#595959' }}> 
+                    student: 38/40 
                 </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
             style={styles.textedit}
             onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 4                   
+                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:0}} >
+                    12/08/2020                   
                 </Text>
 
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
-                    student: 40/40 
+                <Text style={{fontSize:15, paddingTop:4, marginLeft:150, color:'#595959' }}> 
+                    student: 38/40 
                 </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
             style={styles.textedit}
             onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 4                   
+                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:0}} >
+                    12/08/2020                   
                 </Text>
 
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
-                    student: 36/40 
+                <Text style={{fontSize:15, paddingTop:4, marginLeft:150, color:'#595959' }}> 
+                    student: 38/40 
                 </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
             style={styles.textedit}
             onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 3                   
+                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:0}} >
+                    12/08/2020                   
                 </Text>
 
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
-                    student: 36/40 
+                <Text style={{fontSize:15, paddingTop:4, marginLeft:150, color:'#595959' }}> 
+                    student: 38/40 
                 </Text>
             </TouchableOpacity>
 
             <TouchableOpacity
             style={styles.textedit}
             onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 2                   
+                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:0}} >
+                    12/08/2020                   
                 </Text>
 
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
-                    student: 40/40 
+                <Text style={{fontSize:15, paddingTop:4, marginLeft:150, color:'#595959' }}> 
+                    student: 38/40 
                 </Text>
             </TouchableOpacity>
 
-            <TouchableOpacity
-            style={styles.textedit}
-            onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 2                   
-                </Text>
 
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
-                    student: 40/40 
-                </Text>
-            </TouchableOpacity>
 
-            <TouchableOpacity
-            style={styles.textedit}
-            onPress={() => this.props.navigation.navigate('StudentAttend')} title="info4993" >
-                <Text style={{fontWeight:'900', color:'#595959', fontSize:20, marginLeft:8}} >
-                    Chapter 1                   
-                </Text>
-
-                <Text style={{fontSize:15, paddingTop:4, marginLeft:170, color:'#595959' }}> 
-                    student: 40/40 
-                </Text>
-            </TouchableOpacity>
             
             </View></ScrollView>
             <FAB 
@@ -163,7 +160,7 @@ export default class Chapter extends Component{
 
 const styles = StyleSheet.create({
     classtext:{
-        flex:1,
+        
         backgroundColor:'#ffffff',
         alignItems: 'center',
     },

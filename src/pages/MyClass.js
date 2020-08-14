@@ -25,7 +25,7 @@ function MyClass ({navigation}){
                     </Text>
                 </TouchableOpacity>
                 <TouchableOpacity 
-                    onPress={() => navigation.navigate('Chapter')} title="info4993">
+                    onPress={() => navigation.navigate('StudentView')} title="StudentView">
                     <Text style={styles.textedit}>
                         INFO 4024 - SEMESTER 2 2019/2020
                     </Text>

@@ -8,9 +8,9 @@ import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-nativ
 const LogoProfile = () => {
     return (
         <View style={{ marginTop:20,alignSelf:'center', 
-        borderRadius:200,elevation:6, position:'absolute'}}>
+        borderRadius:100,elevation:6, position:'absolute'}}>
             
-            <Image source={require('../images/syed.jpg')} style={{height:150, width:150, borderRadius:100}} />
+            <Image source={require('../images/syed.jpg')} style={{height:130, width:130, borderRadius:100}} />
             
         </View>
     );

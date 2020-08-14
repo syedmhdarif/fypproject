@@ -20,9 +20,9 @@ const info4993=()=> {
             labelStyle: {  fontWeight: 'bold' },          
             style: { backgroundColor: '#199591' },
           }}>
-            <Tab.Screen name="Chapter" component={Chapter}                
+            <Tab.Screen name="Date" component={Chapter}                
               options={{
-              tabBarLabel: 'Chapter',
+              tabBarLabel: 'Date',
               tabBarIcon: ({ color }) => (
              <Icon name="reader" color={color} size={20} />
                 ),}}     

@@ -25,7 +25,7 @@ function IDcard2({navigation}) {
           style={styles.matric} 
           source={require('../images/matriccard.png')}>
             <Image                 
-                style={{ borderRadius:20, marginTop:110,width:wp('37%'), height:hp('20%')}}
+                style={{ borderRadius:20, marginTop:100,width:wp('37%'), height:hp('23%')}}
                 source={require('../images/syed.jpg')}/>
             <View style={styles.textview}>
             <Text style={styles.textedit}>SYED ARIF</Text>
@@ -33,11 +33,11 @@ function IDcard2({navigation}) {
             <Text style={styles.textedit}>BIT</Text></View>
 
             <Image                 
-                style={{borderRadius:8, marginTop:'9%',width:wp('24%'), height:hp('14%')}}
+                style={{borderRadius:8, marginTop:'8%',width:wp('25%'), height:hp('15%')}}
                 source={require('../images/QR.png')}/>
                 <Text style={styles.textedit2}>17.07.2020  03.29pm</Text>
          
-                <TouchableOpacity style={{marginVertical:'8%'}} onPress={()=> auth().signOut()} >
+                <TouchableOpacity style={{marginVertical:'4%'}} onPress={()=> auth().signOut()} >
                      <Text style={{color:'black'}} >Logout</Text>
                </TouchableOpacity></ImageBackground>
                </View>
@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
   matric: {
     marginVertical:20,
     alignSelf:'center',
-    width:wp('90%'), 
-    height:hp('78%'), 
+    width:wp('85%'), 
+    height:hp('90%'), 
     elevation:4, 
     alignItems:'center',
     marginBottom:20,

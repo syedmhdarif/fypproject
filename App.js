@@ -52,6 +52,7 @@ import Reload from './src/wallet/Reload';
 import Give from './src/wallet/Give';
 import Transfer from './src/wallet/Transfer';
 import Reload1 from './src/wallet/Reload1';
+import StudentView from './src/student/StudentView';
 
 const Stack = createStackNavigator();
 
@@ -93,6 +94,7 @@ function App() {
         <Stack.Screen name="Give" component={Give} />
         <Stack.Screen name="Transfer" component={Transfer} />
         <Stack.Screen name="Reload1" component={Reload1} />
+        <Stack.Screen name="StudentView" component={StudentView} />
       </Stack.Navigator>
     </NavigationContainer>
   

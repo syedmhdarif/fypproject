@@ -101,7 +101,7 @@ const ProfileInfo =({navigation}) =>{
       <ScrollView>
       <LinearGradient 
       style={{flex: 1,}}
-      colors={[ '#008075','#00b3a4', '#00e6d2']}> 
+      colors={[ '#199591','#21c4bf', '#51e1dd']}> 
            
            <LogoProfile/>
         
@@ -113,12 +113,27 @@ const ProfileInfo =({navigation}) =>{
             }]}
         >                     
       <View >
-        <View style={{marginTop:'25%'}}>
+        <View style={{marginTop:'18%'}}>
             <Text style={{color:'black', alignSelf:'center', fontSize:20}}>
             syedmhdarif
             </Text>
             <Text style={{color:'black', alignSelf:'center'}}>
             Haiii helloo anyeong this is my bio
+            </Text>
+            <Text style={{color:'black', alignSelf:'center', marginTop:30,}}>
+            Identity Card/Pasport No : 970903035851
+            </Text>
+            <Text style={{color:'black', alignSelf:'center'}}>
+            Gender : MALE
+            </Text>
+            <Text style={{color:'black', alignSelf:'center'}}>
+            Birthday: 03-SEP-97
+            </Text>
+            <Text style={{color:'black', alignSelf:'center'}}>
+            Religion : ISLAM
+            </Text>
+            <Text style={{color:'black', alignSelf:'center'}}>
+            arif.sayed@live.iium.edu.my
             </Text>
             
         </View>
