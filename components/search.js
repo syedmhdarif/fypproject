@@ -104,7 +104,8 @@ export default class Search extends Component {
                   placeholderTextColor="#595959"              
                   secureTextEntry={true}
                   underlineColorAndroid='rgba(0,0,0,0)'
-                  placeholder="Search"                               
+                  placeholder="Search" 
+                  color="black"                              
                   />
       <Icon style={{marginHorizontal:20}} name='search' size={36} color='blue' />
     </View>	
