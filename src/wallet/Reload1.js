@@ -12,19 +12,25 @@ function Reload1 ({navigation}){
       <View>
 <Image style={{resizeMode: "contain",
           marginTop:30,height: 100,
+          alignSelf:"center",
           width: 200 }}
         source={require('../images/successful.png')}/> 
 
 <Text style={{borderBottomWidth:0.8,
-        width:wp('95%'),
-        marginHorizontal:40,
-         paddingBottom:5, 
-         textAlign:"left", 
+         textAlign:"center", 
+         marginTop:15,
          fontWeight:"bold", 
          fontSize: 25, 
          color:'black'}}>
 Awesome!
+</Text>
 
+<Text style={{
+         textAlign:"center", 
+         fontSize: 17,
+         marginHorizontal:10, 
+         color:'black'}} >
+  Reload successful! Please wait a few minutes for your reload and status to be reflected.
 </Text>
       </View>
     )

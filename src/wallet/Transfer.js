@@ -18,10 +18,8 @@ function Transfer ({navigation}){
     
     return(
     
-          <LinearGradient colors={['#004d37','#00996e', '#4dffcc',]} style={styles.linearGradient}>
-            <Text style={styles.buttonText}>
-                TRANSFER
-            </Text>
+      <LinearGradient colors={['#004d37','#00996e', '#4dffcc',]} style={styles.linearGradient}>
+            
           
       <View>
         {/* <TextInput
@@ -33,18 +31,18 @@ function Transfer ({navigation}){
                     placeholderTextColor="#595959"            
                     underlineColorAndroid='rgba(0,0,0,0)'
                     keyboardType = 'numeric'
-                    placeholder="Amount"
+                    placeholder="Insert amount"
                     color='white'
                     />
 
-<TextInput style={styles.inputBox} 
+<TextInput style={styles.inputBox2} 
                     placeholderTextColor="#595959"            
                     underlineColorAndroid='rgba(0,0,0,0)'
                     keyboardType = 'numeric'
                     placeholder="What is it for?"
                     color='white'
                     />
-<TouchableOpacity  onPress={() => navigation.navigate('Reload1')}>
+<TouchableOpacity  onPress={() => navigation.navigate('Qrscanner')}>
                     <Text style={styles.textedit}>
                        Scan Here
                     </Text>
@@ -82,22 +80,22 @@ const styles = StyleSheet.create({
 
     },
     textedit:{ 
-        borderColor:'#595959',
+        borderColor:'gold',
         textAlign:"center",
-        borderWidth:1,
+        borderWidth:2.5,
         alignSelf:"center",
         borderRadius:20,
-        backgroundColor:"silver",
-        width:wp('26%'),
+        backgroundColor:"white",
+        width:wp('30%'),
         paddingHorizontal:5,
         paddingVertical:4,
         marginVertical:5,
         marginHorizontal:8, 
         fontWeight:'900',
-        color:'#595959', fontSize:20
+        color:'black', fontSize:20
     
       },
-      linearGradient: {
+      linearGradient:{
         flex: 1,
         paddingLeft: 15,
         paddingRight: 15,
@@ -113,13 +111,30 @@ const styles = StyleSheet.create({
       },
       inputBox :{
             width :wp('80%'),
-           borderWidth:0.8,
+            marginTop:50,
+            borderWidth:2.5,
+            borderRadius:20,
+            borderColor:"gold",
+            backgroundColor:'white',
             alignSelf:"center",
             paddingHorizontal: 10,
-            fontSize: 18,
-            color: '#ffffff',
+            fontSize: 15,
+            color: '#595959',
             marginVertical:8,
-        }
+        },
+        inputBox2 :{
+          width :wp('80%'),
+          marginTop:2,
+          borderWidth:2.5,
+          borderRadius:20,
+          backgroundColor:'white',
+          borderColor:"gold",
+          alignSelf:"center",
+          paddingHorizontal: 10,
+          fontSize: 15,
+          color: '#ffffff',
+          marginVertical:8,
+      }
 
     
 });

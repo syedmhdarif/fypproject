@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
+import LinearGradient from 'react-native-linear-gradient';
 import { TextInput, TouchableOpacity,View,Text, StyleSheet, } from 'react-native';
 import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 function Reload ({navigation}){
 
     return (
+        <LinearGradient colors={['#004d37','#00996e', '#4dffcc',]} style={styles.linearGradient}>
         <View>
-        <TextInput
-          style={{ height: 40, borderColor: 'gray', borderWidth: 1 }}
-          onChangeText={text => onChangeText(text)}
-          />
+
 
         <TextInput style={styles.inputBox} 
                     placeholderTextColor="#595959"            
@@ -19,7 +18,7 @@ function Reload ({navigation}){
                     color='black'
                     />
         
-        <Text style={{marginLeft:40, fontWeight:"bold"}}> Min reload amount is RM10</Text>
+        <Text style={{fontSize: 14,marginLeft:40}}> Min reload amount is RM10</Text>
 
         <TouchableOpacity  onPress={() => navigation.navigate('Reload1')}>
                     <Text style={styles.textedit}>
@@ -33,12 +32,12 @@ function Reload ({navigation}){
 
 
                     </View>
-
-      )
+                    </LinearGradient>
+      )}
   
 
   
-}
+
 
 export default Reload;
 
@@ -47,12 +46,15 @@ export default Reload;
 const styles = StyleSheet.create({
     inputBox :{
         width :wp('80%'),
-       borderWidth:0.8,
+       borderWidth:2.5,
+       borderColor:"gold",
+       backgroundColor:'white',
+       borderRadius:20,
         alignSelf:"center",
-        paddingHorizontal: 10,
+        paddingHorizontal: 12,
         fontSize: 18,
-        color: '#ffffff',
-        marginVertical:8,
+        // color: 'white',
+        marginTop:50,
     },
     classtext:{
         
@@ -60,12 +62,19 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
 
+    linearGradient: {
+        flex: 1,
+        paddingLeft: 15,
+        paddingRight: 15,
+       
+      },
+
     textedit:{ 
-        borderColor:'#595959',
+        borderColor:'gold',
         textAlign:"center",
-        borderWidth:1,
+        borderWidth:2.5,
         borderRadius:20,
-        backgroundColor:"silver",
+        backgroundColor:"white",
         width:wp('40%'),
         alignSelf:"center",
         paddingHorizontal:10,
@@ -73,7 +82,7 @@ const styles = StyleSheet.create({
         marginVertical:15,
         marginHorizontal:15, 
         fontWeight:'900',
-        color:'#595959', fontSize:20
+        color:'black', fontSize:20
     
       },
 })
