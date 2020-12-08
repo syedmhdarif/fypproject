@@ -1,75 +1,3 @@
-// import React, { Component } from 'react';
-// import {
-//   SafeAreaView,
-//   StyleSheet,
-//   ScrollView,
-//   View,
-//   Text,
-//   Button,
-//   Image,
-//   StatusBar, TouchableOpacity
-// } from 'react-native';
-// import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
-// import Icon from 'react-native-vector-icons/Ionicons';
-
-
-// function ProfileInfo({navigation}){
-    
-//         return(
-//             <View style={{flex:1}}>
-//                 <TouchableOpacity style={styles.header} onPress={() => navigation.openDrawer()}>
-//             <Icon name="reorder-four-outline" color={'#ffffff'} size={20} />
-//                 <Text style={{fontSize:20, fontWeight:'bold', color:'#ffffff', marginHorizontal:15}}>Digital Matric</Text>
-//             </TouchableOpacity>
-            
-//             <View style={{marginHorizontal:17, marginVertical:10}}>
-//                 <Text style={{fontSize:12, fontWeight:'900',marginTop:5}}>
-//                     SYED MOHAMAD ARIF BIN SAYED MOHD
-//                 </Text>
-//                 <Text style={{fontSize:12, fontWeight:'900',}}>
-//                     ALI SAIPUDDIN
-//                 </Text>
-
-//                 <Text style={{fontSize:12, fontWeight:'900', marginTop:5}}>
-//                     KULLIYYAH OF INFORMATION TECHNOLOGY
-//                 </Text>
-
-//                 <Text style={{fontSize:12, fontWeight:'900', marginTop:5}}>
-//                     BIT
-//                 </Text>
-
-//                 <Text style={{fontSize:12, fontWeight:'900', marginTop:5}}>
-//                     Syedarifjr@gmail.com
-//                 </Text>
-                
-//                 <Text style={{fontSize:12, fontWeight:'900', marginTop:5}}>
-//                     4th YEAR
-//                 </Text>
-//             </View>
-//             </View>
-//         )
-    
-// }
-
-// export default ProfileInfo;
-
-// const styles=StyleSheet.create({
-//     header:{
-//         flexDirection:'row',
-//         width:wp('100%'), height:hp('8%'), backgroundColor:'#199591',
-//         shadowColor: "black",
-//         shadowOffset: {
-//           width: 5,
-//           height: 3,
-//         },
-//         shadowOpacity: 0.27,
-//         shadowRadius: 4.65,
-//         elevation: 5,
-//         alignItems:'center',
-//         paddingHorizontal:22
-//       }
-// })
-
 
 
 
@@ -234,3 +162,171 @@ const styles = StyleSheet.create({
 
   });
 export default ProfileInfo;
+
+
+
+
+
+
+// import React, { Component } from 'react';
+// import { Container, Content, Footer, FooterTab, Button, Icon, Text, Form, Item, Label, Input, Picker } from 'native-base';
+// import { Actions } from 'react-native-router-flux';
+// import { db } from '../config/db';
+// import { updateStudent } from '../services/DataServices';
+
+// let studentsRef = db.ref('/students');
+
+// export default class ProfileInfo extends Component {
+//   constructor(){
+//    super();
+//    this.state = {
+//      students: [],
+//      name: null,
+//      matricno: null,
+//      major: null,
+//      year: 0,
+//      status: null,
+//      postID: null
+//    }
+//   }
+
+//   componentDidMount() {
+//     let query = studentsRef.orderByChild("matricno").equalTo(this.props.matricno);
+//       query.once('value', (snapshot) => {
+//       let data = snapshot.val();
+//           if(data){
+//             let firebaseData = Object.values(data);
+//             this.setState({students: firebaseData},()=>{
+//               this.state.students.map((element) => {
+//                 this.setState({
+//                   name: element.name,
+//                   matricno: element.matricno,
+//                   major: element.major,
+//                   year: element.year,
+//                   status: element.status
+//                 });
+//               });
+//             });
+//           }
+//      });
+//   }
+
+//   setName = (value) =>{
+//     this.setState({ name: value });
+//   }
+
+//   setMatricNo = (value) =>{
+//     this.setState({ matricno: value });
+//   }
+
+//   selectMajor = (value) => {
+//     this.setState({ major: value });
+//   }
+
+//   selectYear = (value) => {
+//     this.setState({ year: value });
+//   }
+
+//   selectStatus = (value) => {
+//     this.setState({ status: value });
+//   }
+
+//   updateData = () =>{
+//     if(this.state.name && this.state.matricno && this.state.major && this.state.year && this.state.status){
+//       if(isNaN(this.state.matricno)){
+//         Alert.alert('Status','Invalid Matric No!');
+//       }
+//        else{
+//          updateStudent(this.state.name, this.state.matricno, this.state.major, this.state.year, this.state.status);
+//        }
+//     } else{
+//        Alert.alert('Status','Empty Field(s)!');
+//     }
+//   }
+
+//   render() {
+//     return (
+//       <Container>
+//         <Content padder>
+//         <Text style={{textAlign: "center", height: 40, fontWeight: "bold", marginTop: 20}}>Student Details</Text>
+//         <Text>{this.state.postID}</Text>
+//         <Form>
+//         <Item fixedLabel last>
+//               <Label>Name</Label>
+//               <Input onChangeText={this.setName} value={this.state.name} />
+//         </Item>
+//         <Item fixedLabel last>
+//               <Label>Matric No</Label>
+//               <Input onChangeText={this.setMatricNo} value={this.state.matricno} disabled={true} />
+//         </Item>
+//         <Item fixedLabel picker last>
+//           <Label>Major</Label>
+//           <Picker 
+//           mode="dropdown" 
+//           iosIcon={<Icon name="arrow-down" />}
+//           style={{ width: undefined }}
+//           placeholder="Select Major"
+//           placeholderStyle={{ color: "#bfc6ea" }}
+//           placeholderIconColor="#007aff"
+//           selectedValue={this.state.major}
+//           onValueChange={this.selectMajor}
+//           Title="Major"
+//           >
+//           <Picker.Item label="BIT" value="BIT" />
+//           <Picker.Item label="BCS" value="BCS" />
+//           </Picker>
+//         </Item>
+
+//         <Item fixedLabel picker last>
+//           <Label>Year</Label>
+//           <Picker 
+//           mode="dropdown" 
+//           iosIcon={<Icon name="arrow-down" />}
+//           style={{ width: undefined }}
+//           placeholder="Select Year"
+//           placeholderStyle={{ color: "#bfc6ea" }}
+//           placeholderIconColor="#007aff"
+//           selectedValue={this.state.year}
+//           onValueChange={this.selectYear}
+//           >
+//           <Picker.Item label="1" value="1" />
+//           <Picker.Item label="2" value="2" />
+//           <Picker.Item label="3" value="3" />
+//           <Picker.Item label="4" value="4" />
+//           </Picker>
+//         </Item>
+
+//         <Item fixedLabel picker last>
+//           <Label>Status</Label>
+//           <Picker 
+//           mode="dropdown" 
+//           iosIcon={<Icon name="arrow-down" />}
+//           style={{ width: undefined }}
+//           placeholder="Select Status"
+//           placeholderStyle={{ color: "#bfc6ea" }}
+//           placeholderIconColor="#007aff"
+//           selectedValue={this.state.status}
+//           onValueChange={this.selectStatus}
+//           >
+//           <Picker.Item label="Active" value="Active" />
+//           <Picker.Item label="Inactive" value="Inactive" />
+//           </Picker>
+//         </Item>
+//         </Form>
+
+//           <Button block last style={{marginTop: 50}} onPress={this.updateData}>
+//             <Text style={{fontWeight: "bold"}}>Update</Text>
+//           </Button>
+//         </Content>
+//         <Footer>
+//           <FooterTab>
+//             <Button vertical onPress={() => {Actions.ListScreen();}}>
+//               <Icon name="list-box" />
+//               <Text>Student List</Text>
+//             </Button>
+//           </FooterTab>
+//         </Footer>
+//       </Container>
+//       );
+//   }
+// }

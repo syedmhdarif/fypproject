@@ -53,6 +53,9 @@ import Give from './src/wallet/Give';
 import Transfer from './src/wallet/Transfer';
 import Reload1 from './src/wallet/Reload1';
 import StudentView from './src/student/StudentView';
+// import DataServices from './src/services/DataServices';
+// import StudentList from './src/components/StudentList';
+// import ListScreen from './src/components/ListScreen';
 
 const Stack = createStackNavigator();
 
@@ -95,6 +98,9 @@ function App() {
         <Stack.Screen name="Transfer" component={Transfer} />
         <Stack.Screen name="Reload1" component={Reload1} />
         <Stack.Screen name="StudentView" component={StudentView} />
+        {/* <Stack.Screen name="DataServices" component={DataServices} />
+        <Stack.Screen name="StudentList" component={StudentList} />
+        <Stack.Screen name="ListScreen" component={ListScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
   
@@ -118,6 +124,85 @@ const styles = StyleSheet.create({
 
   
 });
+
+
+
+
+
+
+
+
+
+
+
+// import React from 'react';
+// import { View, Text } from 'react-native';
+// import firebase from 'firebase';
+
+// class App extends React.Component {
+
+//     componentWillMount() {
+
+//         // To Configure react native app with cloud of Google Firebase database !
+//         var config = {
+//           apiKey: "AIzaSyDQ5k4KHBMnw99RyXuPGw19pagzECKjkQQ",
+//           authDomain: "fypproject-6211e.firebaseapp.com",
+//           databaseURL: "https://fypproject-6211e.firebaseio.com",
+//           projectId: "fypproject-6211e",
+//           storageBucket: "fypproject-6211e.appspot.com",
+//           messagingSenderId: "698962627980",
+//           appId: "1:698962627980:web:beb41e777064dd03dadaa9",
+//           measurementId: "G-63PT2FKJNJ"
+        
+//         };
+//         firebase.initializeApp(config);
+
+//         // To select data from firebase every time data has changed !
+//         firebase.database().ref('users').on('value', (data) => {
+//             console.log(data.toJSON());
+//         })
+
+//         // To Await 5 seconds to insert a new user
+//         setTimeout(() => {
+//             firebase.database().ref('users/004').set(
+//                 {
+//                     name: 'Pheng Sengvuthy 004',
+//                     age: 24
+//                 }
+//             ).then(() => {
+//                 console.log('INSERTED !');
+//             }).catch((error) => {
+//                 console.log(error);
+//             });
+//         }, 5000);
+
+//         // To Update a user
+//         firebase.database().ref('users/004').update({
+//             name: 'Pheng Sengvuthy'
+//         });
+
+//         // To Remove a user
+//         firebase.database().ref('users/004').remove();
+
+//     }
+
+//     render() {
+//         return (
+//             <View style={{ alignItems: 'center', height: '100%', justifyContent: 'center' }}>
+//                 <Text style={{ fontWeight: 'bold', fontSize: 18 }}>
+//                     Welcome To ------
+//                     {'\n'}Our Google Firebase Database !
+//                 </Text>
+//             </View>
+//         )
+//     }
+// }
+
+// export default App;
+
+
+
+
 
 
 // import React, { Component } from 'react';
